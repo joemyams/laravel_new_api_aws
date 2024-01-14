@@ -15,11 +15,11 @@ phases:
     commands:
       - cp .env.prod .env
       - docker build -t $IMAGE .
-      - docker tag $IMAGE:$IMAGE_TAG $REPOSITORY/new-elactic-base:latest
+      - docker tag $IMAGE:$IMAGE_TAG $REPOSITORY/$IMAGE:$IMAGE_TAG
 
   post_build:
     on-failure: ABORT
     commands:
       - docker images ls -a
-      - docker push $REPOSITORY/new-elactic-base:latest
+      - docker push $REPOSITORY/$IMAGE:$IMAGE_TAG
 
