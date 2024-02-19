@@ -1,5 +1,5 @@
 # Used for prod build.
-FROM 392581226020.dkr.ecr.us-east-1.amazonaws.com/dummy:latest as php
+FROM prod-laravel-aws:latest as php
 
 # Copy configuration files.
 COPY ./docker/php/php.ini /usr/local/etc/php/php.ini

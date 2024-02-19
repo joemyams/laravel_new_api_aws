@@ -17,3 +17,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+Dockerfile
+Dockerfile.local
+Makefile
+aws-docker-backup
